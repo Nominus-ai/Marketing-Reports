@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TikTok Comments Analysis Report - RUN-20260104-TR56P</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inconsolata', monospace; background: #fff; color: #000; line-height: 1.7; }
+    .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+    header { border-bottom: 3px solid #000; padding-bottom: 30px; margin-bottom: 40px; }
+    header h1 { font-size: 1.75rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 12px; }
+    header p { font-size: 0.9rem; color: #444; }
+    header a { color: #000; }
+    .section { margin-bottom: 40px; }
+    .section h2 { font-size: 1.1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid #000; padding-bottom: 8px; margin-bottom: 20px; }
+    .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .stat-item { text-align: center; padding: 20px; border: 1px solid #000; }
+    .stat-value { font-size: 2rem; font-weight: 700; }
+    .stat-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: #666; margin-top: 4px; }
+    .sentiment-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 16px; }
+    .sentiment-item { text-align: center; padding: 16px; border: 1px solid #000; }
+    .sentiment-item.positive { background: #f0fff4; }
+    .sentiment-item.neutral { background: #f5f5f5; }
+    .sentiment-item.negative { background: #fff5f5; }
+    .sentiment-bar { display: flex; height: 8px; background: #eee; }
+    .sentiment-bar > div { height: 100%; }
+    .bar-positive { background: #000; }
+    .bar-neutral { background: #888; }
+    .bar-negative { background: #ccc; }
+    .list-item { padding: 12px 16px; border-left: 3px solid #000; background: #fafafa; margin-bottom: 8px; font-size: 0.95rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { display: inline-block; padding: 6px 14px; border: 1px solid #000; font-size: 0.85rem; }
+    .recommendation { padding: 16px; border: 1px solid #000; margin-bottom: 12px; background: #fafafa; }
+    .recommendation::before { content: "→ "; font-weight: 700; }
+    .text-block { font-size: 0.95rem; line-height: 1.8; }
+    .meta { font-size: 0.8rem; color: #888; margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; }
+    @media (max-width: 600px) {
+      .stat-grid { grid-template-columns: repeat(2, 1fr); }
+      .sentiment-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>TikTok Comments Analysis</h1>
+      <p><a href="https://www.tiktok.com/@easyaiguy5/video/7512057125292592389" target="_blank">https://www.tiktok.com/@easyaiguy5/video/7512057125292592389</a></p>
+      <p>Run: RUN-20260104-TR56P | January 4, 2026</p>
+    </header>
+
+    <div class="section">
+      <h2>Overview</h2>
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-value">100</div>
+          <div class="stat-label">Comments</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">NEUTRAL</div>
+          <div class="stat-label">Sentiment</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">23</div>
+          <div class="stat-label">High Engage</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">COMPETITOR</div>
+          <div class="stat-label">Type</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Sentiment Distribution</h2>
+      <div class="sentiment-grid">
+        <div class="sentiment-item positive">
+          <div class="stat-value">21</div>
+          <div class="stat-label">Positive</div>
+        </div>
+        <div class="sentiment-item neutral">
+          <div class="stat-value">62</div>
+          <div class="stat-label">Neutral</div>
+        </div>
+        <div class="sentiment-item negative">
+          <div class="stat-value">17</div>
+          <div class="stat-label">Negative</div>
+        </div>
+      </div>
+      <div class="sentiment-bar">
+        <div class="bar-positive" style="width:21.0%"></div>
+        <div class="bar-neutral" style="width:62.0%"></div>
+        <div class="bar-negative" style="width:17.0%"></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Pain Points</h2>
+      <div class="list-item">market saturation (3 mentions)</div><div class="list-item">difficulty selling domains (1 mentions)</div><div class="list-item">missing purchase button (1 mentions)</div><div class="list-item">difficulty finding email address (1 mentions)</div><div class="list-item">fear of scams (1 mentions)</div>
+    </div>
+
+    <div class="section">
+      <h2>Topics</h2>
+      <div class="tags"><span class="tag">domain flipping</span><span class="tag">pricing</span><span class="tag">selling domains</span><span class="tag">market saturation</span><span class="tag">link in bio</span></div>
+    </div>
+
+    <div class="section">
+      <h2>Emotions</h2>
+      <div class="tags"><span class="tag">curiosity</span><span class="tag">excitement</span><span class="tag">joy</span><span class="tag">disappointment</span><span class="tag">frustration</span></div>
+    </div>
+
+    <div class="section">
+      <h2>Slang & Language</h2>
+      <div class="tags"><span class="tag">damn</span><span class="tag">bruuuh</span><span class="tag">trending manipulation</span></div>
+    </div>
+
+    <div class="section">
+      <h2>Audience Profile</h2>
+      <p class="text-block">Individuals interested in domain flipping and online business ventures. They are curious about pricing, the process of selling domains, and how to get started. Some express concerns about market saturation and potential scams. Demographics are not clearly defined, but they are likely tech-savvy and interested in online income opportunities.</p>
+    </div>
+
+    <div class="section">
+      <h2>Key Themes</h2>
+      <div class="list-item">Interest in domain flipping as a business model.</div><div class="list-item">Concerns about market saturation and profitability.</div><div class="list-item">Questions about pricing and the selling process.</div>
+    </div>
+
+    <div class="section">
+      <h2>Recommendations</h2>
+      <div class="recommendation">Address market saturation concerns by highlighting niche domain strategies.</div><div class="recommendation">Create a clear and easy-to-find purchase process.</div><div class="recommendation">Provide transparent pricing information to address user uncertainty.</div><div class="recommendation">Develop content that educates users on how to identify valuable domains.</div><div class="recommendation">Offer tips and strategies for selling domains successfully.</div><div class="recommendation">Address scam concerns by providing trust signals and guarantees.</div><div class="recommendation">Create content about how to get started with domain flipping.</div><div class="recommendation">Provide a clear call to action in the video.</div>
+    </div>
+
+    <div class="section">
+      <h2>Spam Analysis</h2>
+      <p class="text-block">Repetitive neutral comments with no specific content.</p>
+    </div>
+
+    <p class="meta">Report ID: VIN-20260104-BZJVK | Generated by TikTok Comments Analyzer</p>
+  </div>
+</body>
+</html>
