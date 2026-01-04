@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TikTok Comments Analysis Report</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; color: #333; line-height: 1.6; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px 20px; border-radius: 12px; margin-bottom: 30px; }
+    header h1 { font-size: 2rem; margin-bottom: 10px; }
+    header p { opacity: 0.9; }
+    .card { background: white; border-radius: 12px; padding: 24px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .card h2 { font-size: 1.25rem; color: #667eea; margin-bottom: 16px; border-bottom: 2px solid #f0f0f0; padding-bottom: 8px; }
+    .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; }
+    .stat-item { text-align: center; padding: 16px; background: #f8f9ff; border-radius: 8px; }
+    .stat-value { font-size: 2rem; font-weight: 700; color: #667eea; }
+    .stat-label { font-size: 0.875rem; color: #666; }
+    .sentiment-bar { display: flex; height: 32px; border-radius: 16px; overflow: hidden; margin-top: 12px; }
+    .sentiment-positive { background: #10b981; }
+    .sentiment-neutral { background: #6b7280; }
+    .sentiment-negative { background: #ef4444; }
+    .list-item { padding: 12px; background: #f8f9ff; border-radius: 8px; margin-bottom: 8px; }
+    .tag { display: inline-block; padding: 4px 12px; background: #e0e7ff; color: #4338ca; border-radius: 20px; margin: 4px; font-size: 0.875rem; }
+    .recommendation { padding: 16px; background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border-left: 4px solid #0ea5e9; border-radius: 0 8px 8px 0; margin-bottom: 12px; }
+    .meta { font-size: 0.875rem; color: #666; margin-top: 20px; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📊 TikTok Comments Analysis Report</h1>
+      <p>Video: https://www.tiktok.com/@dailyincomeplaybo/video/7538851219469503758</p>
+      <p>Generated: 2026-01-04T04:59:22.279Z</p>
+    </header>
+    
+    <div class="card">
+      <h2>📈 Overview</h2>
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-value">37</div>
+          <div class="stat-label">Total Comments</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">neutral</div>
+          <div class="stat-label">Overall Sentiment</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">8</div>
+          <div class="stat-label">High Engagement</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">competitor</div>
+          <div class="stat-label">Video Type</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h2>💭 Sentiment Distribution</h2>
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-value" style="color:#10b981">4</div>
+          <div class="stat-label">Positive</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" style="color:#6b7280">27</div>
+          <div class="stat-label">Neutral</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" style="color:#ef4444">6</div>
+          <div class="stat-label">Negative</div>
+        </div>
+      </div>
+      <div class="sentiment-bar">
+        <div class="sentiment-positive" style="width:10.8%"></div>
+        <div class="sentiment-neutral" style="width:73.0%"></div>
+        <div class="sentiment-negative" style="width:16.2%"></div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h2>😔 Pain Points</h2>
+      <div class="list-item">difficulty finding bio (2 mentions)</div><div class="list-item">perceived scams (1 mentions)</div><div class="list-item">financial hardship (1 mentions)</div><div class="list-item">being scammed (1 mentions)</div><div class="list-item">risk of losing house (1 mentions)</div>
+    </div>
+    
+    <div class="card">
+      <h2>💬 Top Topics</h2>
+      <div><span class="tag">information request</span><span class="tag">nested domains</span><span class="tag">joining opportunity</span><span class="tag">bio link</span><span class="tag">tutorial</span></div>
+    </div>
+    
+    <div class="card">
+      <h2>😊 Emotions Detected</h2>
+      <div><span class="tag">curiosity</span><span class="tag">frustration</span><span class="tag">joy</span><span class="tag">hope</span><span class="tag">disappointment</span></div>
+    </div>
+    
+    <div class="card">
+      <h2>🗣️ Slang & Casual Language</h2>
+      <div><span class="tag">balony</span><span class="tag">what's up</span><span class="tag">put me on</span></div>
+    </div>
+    
+    <div class="card">
+      <h2>👥 Audience Profile</h2>
+      <p>Individuals interested in online income opportunities, particularly nested domains. Some are beginners seeking guidance and tutorials. Others are potentially vulnerable individuals who have experienced financial hardship or scams. They are curious about joining opportunities and learning new skills.</p>
+    </div>
+    
+    <div class="card">
+      <h2>🎯 Key Themes</h2>
+      <div class="list-item">Interest in nested domains and learning opportunities</div><div class="list-item">Skepticism and distrust towards online opportunities</div><div class="list-item">Difficulty finding key information (bio link)</div>
+    </div>
+    
+    <div class="card">
+      <h2>💡 Recommendations</h2>
+      <div class="recommendation">Make the bio link more prominent and easier to find.</div><div class="recommendation">Create a tutorial or explainer video on nested domains to address user curiosity.</div><div class="recommendation">Address concerns about scams and build trust by providing transparent information and testimonials.</div><div class="recommendation">Offer a clear path for users to join the opportunity being presented.</div><div class="recommendation">Consider the potential vulnerability of the audience and avoid making unrealistic promises.</div><div class="recommendation">Provide clear pricing information upfront to avoid frustration and distrust.</div>
+    </div>
+    
+    <div class="card">
+      <h2>⚠️ Spam Analysis</h2>
+      <p>Repetitive questions asking for information|Spam comments</p>
+    </div>
+    
+    <p class="meta">Report ID: VIN-20260103-NRTET | Generated by TikTok Comments Analyzer</p>
+  </div>
+</body>
+</html>
