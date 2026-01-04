@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TikTok Comments Analysis Report - RUN-20260104-0PVQ7</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inconsolata', monospace; background: #fff; color: #000; line-height: 1.7; }
+    .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+    header { border-bottom: 3px solid #000; padding-bottom: 30px; margin-bottom: 40px; }
+    header h1 { font-size: 1.75rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 12px; }
+    header p { font-size: 0.9rem; color: #444; }
+    header a { color: #000; }
+    .section { margin-bottom: 40px; }
+    .section h2 { font-size: 1.1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid #000; padding-bottom: 8px; margin-bottom: 20px; }
+    .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .stat-item { text-align: center; padding: 20px; border: 1px solid #000; }
+    .stat-value { font-size: 2rem; font-weight: 700; }
+    .stat-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: #666; margin-top: 4px; }
+    .sentiment-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 16px; }
+    .sentiment-item { text-align: center; padding: 16px; border: 1px solid #000; }
+    .sentiment-item.positive { background: #f0fff4; }
+    .sentiment-item.neutral { background: #f5f5f5; }
+    .sentiment-item.negative { background: #fff5f5; }
+    .sentiment-bar { display: flex; height: 8px; background: #eee; }
+    .sentiment-bar > div { height: 100%; }
+    .bar-positive { background: #000; }
+    .bar-neutral { background: #888; }
+    .bar-negative { background: #ccc; }
+    .list-item { padding: 12px 16px; border-left: 3px solid #000; background: #fafafa; margin-bottom: 8px; font-size: 0.95rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { display: inline-block; padding: 6px 14px; border: 1px solid #000; font-size: 0.85rem; }
+    .recommendation { padding: 16px; border: 1px solid #000; margin-bottom: 12px; background: #fafafa; }
+    .recommendation::before { content: "→ "; font-weight: 700; }
+    .text-block { font-size: 0.95rem; line-height: 1.8; }
+    .meta { font-size: 0.8rem; color: #888; margin-top: 40px; padding-top: 20px; border-top: 1px solid #ddd; text-align: center; }
+    @media (max-width: 600px) {
+      .stat-grid { grid-template-columns: repeat(2, 1fr); }
+      .sentiment-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>TikTok Comments Analysis</h1>
+      <p><a href="https://www.tiktok.com/@liezlaicoach/video/7537281812075236630" target="_blank">https://www.tiktok.com/@liezlaicoach/video/7537281812075236630</a></p>
+      <p>Run: RUN-20260104-0PVQ7 | January 4, 2026</p>
+    </header>
+
+    <div class="section">
+      <h2>Overview</h2>
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-value">518</div>
+          <div class="stat-label">Comments</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">NEUTRAL</div>
+          <div class="stat-label">Sentiment</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">237</div>
+          <div class="stat-label">High Engage</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">COMPETITOR</div>
+          <div class="stat-label">Type</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Sentiment Distribution</h2>
+      <div class="sentiment-grid">
+        <div class="sentiment-item positive">
+          <div class="stat-value">144</div>
+          <div class="stat-label">Positive</div>
+        </div>
+        <div class="sentiment-item neutral">
+          <div class="stat-value">347</div>
+          <div class="stat-label">Neutral</div>
+        </div>
+        <div class="sentiment-item negative">
+          <div class="stat-value">27</div>
+          <div class="stat-label">Negative</div>
+        </div>
+      </div>
+      <div class="sentiment-bar">
+        <div class="bar-positive" style="width:27.8%"></div>
+        <div class="bar-neutral" style="width:67.0%"></div>
+        <div class="bar-negative" style="width:5.2%"></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Pain Points</h2>
+      <div class="list-item">pricing too high (10 mentions)</div><div class="list-item">difficulty finding bio (2 mentions)</div><div class="list-item">difficulty finding video (1 mentions)</div><div class="list-item">missing domain list (1 mentions)</div><div class="list-item">broken link (3 mentions)</div>
+    </div>
+
+    <div class="section">
+      <h2>Topics</h2>
+      <div class="tags"><span class="tag">tutorial</span><span class="tag">machine</span><span class="tag">pricing</span><span class="tag">nested domains</span><span class="tag">information</span></div>
+    </div>
+
+    <div class="section">
+      <h2>Emotions</h2>
+      <div class="tags"><span class="tag">curiosity</span><span class="tag">hope</span><span class="tag">joy</span><span class="tag">frustration</span><span class="tag">excitement</span></div>
+    </div>
+
+    <div class="section">
+      <h2>Slang & Language</h2>
+      <div class="tags"><span class="tag">what's up</span><span class="tag">balony</span><span class="tag">put me on</span><span class="tag">give me the tea</span><span class="tag">tapn</span><span class="tag">boo</span><span class="tag">pls</span></div>
+    </div>
+
+    <div class="section">
+      <h2>Audience Profile</h2>
+      <p class="text-block">Individuals interested in learning about nested domains and machine learning. They are curious about joining opportunities and tutorials. Some express concerns about pricing and potential scams. Geographically diverse, including interest from Canada.</p>
+    </div>
+
+    <div class="section">
+      <h2>Key Themes</h2>
+      <div class="list-item">High interest in learning about nested domains and machine learning</div><div class="list-item">Concerns about pricing and potential scams</div><div class="list-item">Technical difficulties and access issues</div>
+    </div>
+
+    <div class="section">
+      <h2>Recommendations</h2>
+      <div class="recommendation">Address pricing concerns by offering payment plans or highlighting value proposition.</div><div class="recommendation">Create a clear and easily accessible bio link.</div><div class="recommendation">Fix broken links and technical issues to improve user experience.</div><div class="recommendation">Provide more tutorials and training videos on nested domains and machine learning.</div><div class="recommendation">Address concerns about potential scams by providing transparency and building trust.</div><div class="recommendation">Create content that demonstrates the value and use cases of the product.</div><div class="recommendation">Offer support and assistance to users experiencing technical difficulties.</div><div class="recommendation">Consider creating content in multiple languages to cater to a diverse audience.</div>
+    </div>
+
+    <div class="section">
+      <h2>Spam Analysis</h2>
+      <p class="text-block">Spam comments promoting training videos|General inquiries about the product</p>
+    </div>
+
+    <p class="meta">Report ID: VIN-20260104-X9N87 | Generated by TikTok Comments Analyzer</p>
+  </div>
+</body>
+</html>
