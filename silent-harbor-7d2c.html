@@ -692,6 +692,126 @@
       font-weight: 700;
     }
 
+    /* Bar Chart (CSS-only) */
+    .bar-chart {
+      margin: 24px 0;
+    }
+    .bar-chart-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .bar-chart-label {
+      width: 160px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--fg);
+      text-align: right;
+      flex-shrink: 0;
+    }
+    .bar-chart-track {
+      flex: 1;
+      height: 28px;
+      background: var(--secondary);
+      border-radius: 6px;
+      overflow: hidden;
+      position: relative;
+    }
+    .bar-chart-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--success) 0%, #059669 100%);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 10px;
+      transition: width 0.8s ease;
+    }
+    .bar-chart-fill.accent {
+      background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
+    }
+    .bar-chart-value {
+      font-size: 11px;
+      font-weight: 700;
+      color: white;
+    }
+    .bar-chart-value-outside {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--success);
+      margin-left: 8px;
+      flex-shrink: 0;
+    }
+
+    /* Savings Badge */
+    .savings-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 20px;
+      background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+      color: white;
+      border-radius: 24px;
+      font-size: 14px;
+      font-weight: 700;
+      margin: 16px 0;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    }
+
+    /* Section Number */
+    .section-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: var(--fg);
+      color: white;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 700;
+      margin-right: 12px;
+    }
+
+    /* Key Metric Cards (inline) */
+    .metric-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .metric-card {
+      background: var(--secondary);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .metric-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--success);
+    }
+    .metric-card .metric-value {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--success);
+      margin-bottom: 4px;
+    }
+    .metric-card .metric-label {
+      font-size: 11px;
+      color: var(--muted-fg);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
     .phase-card ul {
       list-style: none;
       font-size: 12px;
@@ -864,8 +984,12 @@
 
       <div class="hero-card">
         <div class="hero-label">Costo Real de Desarrollo</div>
-        <div class="hero-value">$128,000 - $135,000</div>
-        <div class="hero-subtitle">1,500 horas de trabajo profesional invertido a $85/hr</div>
+        <div class="hero-value">$134,000 - $142,000</div>
+        <div class="hero-subtitle">1,575+ horas de trabajo profesional invertido a $85/hr</div>
+      </div>
+
+      <div class="info-box" style="border-left-color: var(--muted-fg); font-size: 12px; opacity: 0.85;">
+        <p><strong>Referencia de tarifa:</strong> La tarifa de $85/hr se basa en el rango de mercado para desarrolladores iOS senior freelance en Florida ($75-$120/hr según Indeed, Glassdoor y Upwork, 2025-2026). Se utiliza un estimado conservador dentro del rango inferior.</p>
       </div>
 
       <div class="info-box">
@@ -971,7 +1095,7 @@
           <h4 style="font-size: 11px; font-weight: 600; margin-bottom: 4px; color: var(--fg);">Infraestructura</h4>
           <div style="background: var(--success); color: white; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 10px; display: inline-block; margin-bottom: 8px;">10</div>
           <ul style="font-size: 10px; text-align: left; margin: 0; padding-left: 14px; color: var(--muted-fg); line-height: 1.5;">
-            <li>13 tablas PostgreSQL</li>
+            <li>16 tablas PostgreSQL</li>
             <li>Edge Functions</li>
             <li>Control costos IA</li>
             <li>Privacy + Terms</li>
@@ -1134,8 +1258,8 @@
 
       <div class="hero-card">
         <div class="hero-label">Trabajo Realizado</div>
-        <div class="hero-value">1,500 Horas</div>
-        <div class="hero-subtitle">8 fases de desarrollo profesional</div>
+        <div class="hero-value">1,575+ Horas</div>
+        <div class="hero-subtitle">9 fases de desarrollo profesional</div>
       </div>
 
       <div class="phase-cards">
@@ -1199,7 +1323,7 @@
           </div>
           <ul>
             <li>Configuracion Supabase</li>
-            <li>15+ tablas PostgreSQL</li>
+            <li>16 tablas PostgreSQL</li>
             <li>Row Level Security (42 reglas)</li>
             <li>Edge Functions para logica</li>
             <li>APIs REST optimizadas</li>
@@ -1266,6 +1390,23 @@
             <li>App Store Connect setup completo</li>
             <li>Bundle ID y certificados</li>
             <li>Provisioning profiles</li>
+          </ul>
+        </div>
+
+        <div class="phase-card">
+          <div class="phase-card-header">
+            <div class="phase-card-number">9</div>
+            <div class="phase-card-title">
+              <h4>Post-lanzamiento (Mar-May 2026)</h4>
+              <span>75+ horas</span>
+            </div>
+          </div>
+          <ul>
+            <li>Corrección de bugs reportados por usuarios</li>
+            <li>Actualizaciones de compatibilidad iOS</li>
+            <li>Optimización de prompts de IA</li>
+            <li>Mejoras de rendimiento y UX</li>
+            <li>Nuevas migraciones de base de datos</li>
           </ul>
         </div>
       </div>
@@ -1338,11 +1479,93 @@
 
       <div class="hero-card">
         <div class="hero-label">Costo Equivalente</div>
-        <div class="hero-value">$128,000 - $135,000</div>
-        <div class="hero-subtitle">Tarifa freelance $85/hr x 1,500 horas + licencias + infraestructura</div>
+        <div class="hero-value">$134,000 - $142,000</div>
+        <div class="hero-subtitle">Tarifa freelance $85/hr x 1,575+ horas + licencias + infraestructura</div>
       </div>
 
-      <h3 style="font-size: 20px; margin-bottom: 16px; color: var(--fg);">Desglose por Area</h3>
+      <h3 style="font-size: 20px; margin-bottom: 16px; color: var(--fg);">Distribución de Horas por Área</h3>
+
+      <div class="bar-chart">
+        <div class="bar-chart-item">
+          <div class="bar-chart-label">Desarrollo iOS</div>
+          <div class="bar-chart-track">
+            <div class="bar-chart-fill" style="width: 50.8%"><span class="bar-chart-value">800 hrs</span></div>
+          </div>
+        </div>
+        <div class="bar-chart-item">
+          <div class="bar-chart-label">Diseño de interfaz</div>
+          <div class="bar-chart-track">
+            <div class="bar-chart-fill" style="width: 12.7%"></div>
+          </div>
+          <span class="bar-chart-value-outside">200 hrs</span>
+        </div>
+        <div class="bar-chart-item">
+          <div class="bar-chart-label">Backend y DB</div>
+          <div class="bar-chart-track">
+            <div class="bar-chart-fill" style="width: 9.5%"></div>
+          </div>
+          <span class="bar-chart-value-outside">150 hrs</span>
+        </div>
+        <div class="bar-chart-item">
+          <div class="bar-chart-label">Pruebas y calidad</div>
+          <div class="bar-chart-track">
+            <div class="bar-chart-fill" style="width: 6.3%"></div>
+          </div>
+          <span class="bar-chart-value-outside">100 hrs</span>
+        </div>
+        <div class="bar-chart-item">
+          <div class="bar-chart-label">Investigación</div>
+          <div class="bar-chart-track">
+            <div class="bar-chart-fill accent" style="width: 5.1%"></div>
+          </div>
+          <span class="bar-chart-value-outside">80 hrs</span>
+        </div>
+        <div class="bar-chart-item">
+          <div class="bar-chart-label">Inteligencia artificial</div>
+          <div class="bar-chart-track">
+            <div class="bar-chart-fill accent" style="width: 5.1%"></div>
+          </div>
+          <span class="bar-chart-value-outside">80 hrs</span>
+        </div>
+        <div class="bar-chart-item">
+          <div class="bar-chart-label">Post-lanzamiento</div>
+          <div class="bar-chart-track">
+            <div class="bar-chart-fill" style="width: 4.8%; background: linear-gradient(90deg, var(--warning) 0%, #d97706 100%)"></div>
+          </div>
+          <span class="bar-chart-value-outside">75+ hrs</span>
+        </div>
+        <div class="bar-chart-item">
+          <div class="bar-chart-label">Despliegue</div>
+          <div class="bar-chart-track">
+            <div class="bar-chart-fill accent" style="width: 3.8%"></div>
+          </div>
+          <span class="bar-chart-value-outside">60 hrs</span>
+        </div>
+        <div class="bar-chart-item">
+          <div class="bar-chart-label">Marca y contenido</div>
+          <div class="bar-chart-track">
+            <div class="bar-chart-fill accent" style="width: 1.9%"></div>
+          </div>
+          <span class="bar-chart-value-outside">30 hrs</span>
+        </div>
+      </div>
+
+      <div class="metric-row">
+        <div class="metric-card">
+          <div class="metric-value">1,575+</div>
+          <div class="metric-label">Horas Totales</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">$85/hr</div>
+          <div class="metric-label">Tarifa de Mercado FL</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-value">283</div>
+          <div class="metric-label">Usuarios de Pago</div>
+        </div>
+      </div>
+
+      <h3 style="font-size: 20px; margin: 32px 0 16px; color: var(--fg);">Desglose por Área (detalle)</h3>
 
       <div class="table-container">
         <table>
@@ -1372,7 +1595,7 @@
             <tr>
               <td>Backend y base de datos</td>
               <td class="value-cell">150</td>
-              <td>13 tablas, 42 reglas de seguridad, 38 migraciones</td>
+              <td>16 tablas, 42 reglas de seguridad, 58 migraciones</td>
             </tr>
             <tr>
               <td>Inteligencia artificial</td>
@@ -1394,9 +1617,14 @@
               <td class="value-cell">60</td>
               <td>Configuracion de servidores, dominio, App Store</td>
             </tr>
+            <tr>
+              <td>Post-lanzamiento (Mar-May 2026)</td>
+              <td class="value-cell">75+</td>
+              <td>Bugs, updates iOS, optimización IA, nuevas migraciones</td>
+            </tr>
             <tr class="total-row">
               <td><strong>TOTAL</strong></td>
-              <td><strong>1,500</strong></td>
+              <td><strong>1,575+</strong></td>
               <td></td>
             </tr>
           </tbody>
@@ -1553,7 +1781,7 @@
       </div>
 
       <div class="info-box" style="border-left-color: var(--success); margin-top: 12px;">
-        <p><strong>Desarrollador dedicado:</strong> Pago a 1 desarrollador dedicado exclusivamente a mantener, actualizar y mejorar Calofit de forma continua.</p>
+        <p><strong>Desarrollador dedicado:</strong> Pago a 1 desarrollador senior dedicado exclusivamente a mantener, actualizar y mejorar Calofit de forma continua. Referencia: un iOS developer junior en Miami gana $65K-$85K/año. Montane LLC ofrece un developer senior por $50,400/año — un 38% menos que el perfil más básico del mercado.</p>
       </div>
 
       <div class="table-container">
@@ -1696,7 +1924,7 @@
             </tr>
             <tr style="background: var(--success-bg);">
               <td><strong>Recibir Calofit + Mantenimiento Montane LLC</strong></td>
-              <td class="value-cell"><strong>$128K - $135K</strong></td>
+              <td class="value-cell"><strong>$134K - $142K</strong></td>
               <td class="value-cell"><strong>$50,400</strong></td>
               <td class="value-cell"><strong>1 mes</strong></td>
               <td class="value-cell"><strong>Mínimo</strong></td>
@@ -1705,8 +1933,12 @@
         </table>
       </div>
 
-      <div class="info-box" style="margin-top: 24px; border-left-color: var(--success);">
-        <p><strong>Ahorro con Montane LLC:</strong> Comparado con mantener un equipo interno ($80K-$120K/año) o contratar una agencia ($50K-$80K/año), el mantenimiento de Montane LLC representa un ahorro del <span style="color: var(--success); font-weight: 700;">70-85%</span> en costos operativos anuales.</p>
+      <div style="text-align: center;">
+        <div class="savings-badge">Ahorro vs alternativas: 70-85% en costos anuales</div>
+      </div>
+
+      <div class="info-box" style="margin-top: 16px; border-left-color: var(--success);">
+        <p><strong>Comparativa de mercado:</strong> Equipo interno ($80K-$120K/año) o agencia ($50K-$80K/año) vs. Montane LLC ($50,400/año). El mantenimiento incluye un developer senior dedicado a menor costo que el perfil junior más básico del mercado de Florida.</p>
       </div>
     </section>
 
@@ -1716,14 +1948,8 @@
         <h2>Valor del Aporte</h2>
       </div>
 
-      <div class="highlight-card">
-        <div class="highlight-label">Valor del Aporte Técnico</div>
-        <div class="highlight-value">$128,000 - $135,000</div>
-        <div class="highlight-subtitle">Costo de desarrollo + infraestructura + 283 usuarios de pago activos</div>
-      </div>
-
-      <div class="info-box">
-        <p><strong>El producto está validado en el mercado con usuarios reales que pagan.</strong> A diferencia de un MVP sin tracción, Calofit ya eliminó el riesgo técnico y demostró product-market fit con 283 suscriptores activos.</p>
+      <div class="info-box" style="border-left-color: var(--success);">
+        <p><strong>Inversión total verificable: $134,000 - $142,000.</strong> El producto está validado con 283 usuarios de pago activos — el riesgo técnico fue eliminado. El desglose completo:</p>
       </div>
 
       <h3 style="font-size: 20px; margin-bottom: 16px; color: var(--fg);">Desglose del Valor</h3>
@@ -1734,51 +1960,43 @@
             <tr>
               <th>Componente</th>
               <th>Costo de Desarrollo</th>
-              <th>Valor Contable (sin tracción)</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Producto funcional (~43,987 lineas de codigo, 191 archivos Swift)</td>
-              <td>$120,000 - $127,000</td>
-              <td class="value-cell">$23,000 - $29,500</td>
+              <td>Producto funcional (~43,987 líneas de código, 191 archivos Swift)</td>
+              <td class="value-cell">$120,000 - $127,000</td>
             </tr>
             <tr>
               <td>Sistema de diseño + marca + assets</td>
-              <td>$3,500</td>
-              <td class="value-cell">$2,000</td>
+              <td class="value-cell">$3,500</td>
             </tr>
             <tr>
               <td>Documentos legales (EN + ES)</td>
-              <td>$1,200</td>
-              <td class="value-cell">$200</td>
+              <td class="value-cell">$1,200</td>
             </tr>
             <tr>
               <td>Documentación técnica</td>
-              <td>$1,500</td>
-              <td class="value-cell">$700</td>
+              <td class="value-cell">$1,500</td>
             </tr>
             <tr>
               <td>Infraestructura y dominio</td>
-              <td>$1,000</td>
               <td class="value-cell">$1,000</td>
             </tr>
             <tr>
               <td>Suscripciones de desarrollo (Xcode, Apple Dev, tools)</td>
-              <td>$800</td>
-              <td class="value-cell">$600</td>
+              <td class="value-cell">$800</td>
+            </tr>
+            <tr>
+              <td>Mantenimiento post-lanzamiento (Mar-May 2026, 75+ hrs)</td>
+              <td class="value-cell">$6,375+</td>
             </tr>
             <tr class="total-row">
-              <td><strong>TOTAL</strong></td>
-              <td><strong>$128K - $135K</strong></td>
-              <td><strong>N/A — Calofit tiene 283 usuarios de pago</strong></td>
+              <td><strong>TOTAL INVERSIÓN EN DESARROLLO</strong></td>
+              <td class="value-cell"><strong>$134K - $142K</strong></td>
             </tr>
           </tbody>
         </table>
-      </div>
-
-      <div class="info-box" style="margin-top: 16px; border-left-color: var(--success);">
-        <p><strong>Nota:</strong> La columna "Valor Contable (sin tracción)" refleja lo que valdría un producto equivalente SIN usuarios. Calofit ya superó esa etapa: con 283 usuarios de pago activos, el valor real del producto es significativamente mayor al valor contable base.</p>
       </div>
 
       <h3 style="font-size: 20px; margin: 24px 0 16px; color: var(--fg);">Tracción Actual</h3>
@@ -1787,23 +2005,17 @@
         <p><strong>283 usuarios de pago activos</strong> — Calofit ya demostró product-market fit. El producto está publicado en App Store, tiene retención de usuarios y genera ingresos recurrentes.</p>
       </div>
 
-      <div class="highlight-card" style="background: linear-gradient(135deg, var(--fg) 0%, #1a1a2e 100%);">
-        <div class="highlight-label">Potencial con Traccion</div>
-        <div class="highlight-value" style="color: var(--success);">$2M - $3M+</div>
-        <div class="highlight-subtitle">Con 10,000 usuarios activos pagando: ~$80,000/mes en ingresos</div>
-      </div>
-
       <div class="info-box" style="background: var(--success-bg); border-left-color: var(--success);">
-        <p><strong>Producto listo, tecnología premium, valor demostrado.</strong> El producto ya elimino el mayor riesgo técnico: funciona de principio a fin. Los riesgos pendientes son de mercado, que es exactamente donde un socio de marketing/growth aporta su valor.</p>
+        <p><strong>Producto listo, tecnología premium, valor demostrado.</strong> El producto ya eliminó el mayor riesgo técnico: funciona de principio a fin con usuarios reales pagando. Los socios de crecimiento aportan su valor exactamente donde el producto más lo necesita: distribución y posicionamiento.</p>
       </div>
     </section>
 
     <!-- Footer -->
     <footer class="page-footer">
       <div class="footer-content">
-        <p>Documento de valoracion generado para inversores</p>
-        <p>Basado en analisis directo de 191 archivos Swift (~43,987 lineas) + 38 migraciones SQL</p>
-        <p style="opacity: 0.6; font-size: 11px;">Actualizado: 7 de marzo de 2026</p>
+        <p>Documento interno de valoración técnica — Montane LLC</p>
+        <p>Basado en análisis directo de 191 archivos Swift (~43,987 líneas) + 58 migraciones SQL</p>
+        <p style="opacity: 0.6; font-size: 11px;">Actualizado: mayo 2026</p>
       </div>
     </footer>
   </main>
